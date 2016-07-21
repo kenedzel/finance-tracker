@@ -14,7 +14,7 @@ init_friend_lookup = function(){
 
 	$('#friend-lookup-form').on('ajax:error', function(event, xhr, status, error){
 		$('#friend-lookup-results').replaceWith(' ');
-		$('#friend-lookup-errors').replaceWith('person was not found.');
+		$('#friend-lookup-errors').replaceWith('<p class="lead col-md-12">No people matched this search criteria.</p>');
 		hide_spinner();
 	});
 }

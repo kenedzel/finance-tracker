@@ -36,7 +36,7 @@ class User < ApplicationRecord
   end
 
   def not_friends_with?(friend_id)
-    friendships.where(friend_id: friend_id).count > 1
+    friendships.where(friend_id: friend_id).count < 1
   end
 
   # def except_current_user(users)
